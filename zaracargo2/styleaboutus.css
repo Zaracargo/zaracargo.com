@@ -1,0 +1,146 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Navbar - Using original styles */
+.navbar {
+    width: 95%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 130px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #00B2FF;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+/* Content Layout */
+.about-content {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-details {
+    display: grid;
+    gap: 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+/* Section Styles */
+.company-info, .contact-info {
+    line-height: 1.6;
+}
+
+.company-info h2, .contact-info h2 {
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.company-info h3 {
+    margin: 1.5rem 0 0.5rem;
+    color: #fff;
+}
+
+.company-info ul {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.map {
+    width: 100%;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .about-details {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 3rem;
+    }
+
+    .map {
+        grid-column: 1 / -1;
+    }
+
+    .map iframe {
+        height: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-details {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .map iframe {
+        height: 450px;
+    }
+}
+
+/* Animation */
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

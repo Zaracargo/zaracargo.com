@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARTNER - Zara Cargo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+     width: 100%;
+    height: 225vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background.jpg);
+    background-size: cover;
+    
+            background-repeat: no-repeat
+        }
+
+        .navbar {
+            width: 95%;
+            margin: auto;
+            padding: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 130px;
+            
+            cursor: pointer;
+        }
+
+        .navbar ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0%;
+            background: #00B2FF;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 40px 0;
+            font-size: 2.5em;
+            color: #fff;
+        }
+
+        .partner-grid {
+            width: 90%;
+            margin: 0 auto;
+            columns: 4;
+            column-gap: 20px;
+            padding: 20px;
+        }
+
+        @media (max-width: 1200px) {
+            .partner-grid { columns: 3; }
+        }
+
+        @media (max-width: 900px) {
+            .partner-grid { columns: 2; }
+        }
+
+        @media (max-width: 600px) {
+            .partner-grid { columns: 1; }
+        }
+
+        .partner-item {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+
+        .partner-item:hover {
+            transform: scale(1.02);
+        }
+
+        .partner-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            aspect-ratio: 1;
+        }
+
+        .partner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 178, 255, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .partner-item:hover .partner-overlay {
+            opacity: 1;
+        }
+
+        .partner-name {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 20px;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .partner-item:hover .partner-name {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="zara logo.png" class="logo">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="page-header">OUR PARTNERS</h1>
+
+    <div class="partner-grid">
+        <div class="partner-item">
+            <img src="islamkmsa.jpg" alt="Islam KMSA">
+            <a href="https://islamkmsa.com/" target="_blank" class="partner-overlay">
+                <span class="partner-name">Islam KMSA</span>
+            </a>
+        </div>
+        <div class="partner-item">
+            <img src="levasaudi.jpg" alt="Leva Saudi">
+            <a href="https://levasaudi.com/" target="_blank" class="partner-overlay">
+                <span class="partner-name">Leva Saudi</span>
+            </a>
+        </div>
+        <div class="partner-item">
+            <img src="taraashop.jpg" alt="Taraa Shop">
+            <a href="https://taraashop.com/" target="_blank" class="partner-overlay">
+                <span class="partner-name">Taraa Shop</span>
+            </a>
+        </div>
+        <div class="partner-item">
+            <img src="salla-mtgr-rabab.jpg" alt="Salla - Mtgr Rabab">
+            <a href="https://salla.sa/mtgr-rabab" target="_blank" class="partner-overlay">
+                <span class="partner-name">Salla - Mtgr Rabab</span>
+            </a>
+        </div>
+        <div class="partner-item">
+            <img src="salla-hno011.jpg" alt="Salla - Hno011">
+            <a href="https://salla.sa/hno011" target="_blank" class="partner-overlay">
+                <span class="partner-name">Salla - Hno011</span>
+            </a>
+        </div>
+        <div class="partner-item">
+            <img src="ibrahim-al-qurashi.jpg" alt="Ibrahim Al Qurashi">
+            <a href="https://saudi.ibrahimalqurashi.com/ar" target="_blank" class="partner-overlay">
+                <span class="partner-name">Ibrahim Al Qurashi</span>
+            </a>
+        </div>
+        <div class="partner-item">
+            <img src="banafa-foroud.jpg" alt="Banafa Foroud">
+            <a href="https://banafaforoud.com/ar/" target="_blank" class="partner-overlay">
+                <span class="partner-name">Banafa Foroud</span>
+            </a>
+        </div>
+        <div class="partner-item">
+            <img src="3saf.jpg" alt="3Saf">
+            <a href="https://3saf.com/ar" target="_blank" class="partner-overlay">
+                <span class="partner-name">3Saf</span>
+            </a>
+        </div>
+        <div class="partner-item">
+            <img src="dkhoon-emirates.jpg" alt="Dkhoon Emirates">
+            <a href="https://dkhoonemirates.com" target="_blank" class="partner-overlay">
+                <span class="partner-name">Dkhoon Emirates</span>
+            </a>
+        </div>
+        <div class="partner-item">
+            <img src="oudamoudi.jpg" alt="Oudamoudi">
+            <a href="https://oudamoudi.com" target="_blank" class="partner-overlay">
+                <span class="partner-name">Oudamoudi</span>
+            </a>
+        </div>
+        <div class="partner-item">
+            <img src="noir-perfume.jpg" alt="Noir Perfume">
+            <a href="https://noir-perfume.com/dPmRVad" target="_blank" class="partner-overlay">
+                <span class="partner-name">Noir Perfume</span>
+            </a>
+        </div>
+        <div class="partner-item">
+            <img src="arabian-oud.jpg" alt="Arabian Oud">
+            <a href="https://sa.arabianoud.com/ar" target="_blank" class="partner-overlay">
+                <span class="partner-name">Arabian Oud</span>
+            </a>
+        </div>
+        <div class="partner-item">
+            <img src="match-perfumes.jpg" alt="Match Perfumes">
+            <a href="https://matchperfumes.com" target="_blank" class="partner-overlay">
+                <span class="partner-name">Match Perfumes</span>
+            </a>
+        </div>
+        <div class="partner-item">
+            <img src="gissah.jpg" alt="Gissah">
+            <a href="https://sa.gissah.com" target="_blank" class="partner-overlay">
+                <span class="partner-name">Gissah</span>
+            </a>
+        </div>
+        <div class="partner-item">
+            <img src="trendyol.jpg" alt="Trendyol">
+            <a href="https://www.trendyol.com/ar" target="_blank" class="partner-overlay">
+                <span class="partner-name">Trendyol</span>
+            </a>
+        </div>
+        <div class="partner-item">
+            <img src="shein.jpg" alt="Shein">
+            <a href="https://ar.shein.com/" target="_blank" class="partner-overlay">
+                <span class="partner-name">Shein</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

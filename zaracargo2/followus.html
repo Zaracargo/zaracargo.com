@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow Us - Zara Cargo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Social Media Page Styles */
+        .social-content {
+            padding: 50px 20px; /* Add horizontal padding for smaller screens */
+            text-align: center;
+            color: #fff;
+        }
+
+        .social-content h1 {
+            font-size: 40px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .social-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+            gap: 20px; /* Smaller gap for smaller screens */
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .social-links a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-10px);
+            background: rgba(0, 178, 255, 0.7);
+        }
+
+        .social-links i {
+            font-size: 40px;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover i {
+            color: #00B2FF;
+        }
+
+        .social-links span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Responsive Design for Smaller Screens */
+        @media (max-width: 768px) {
+            .social-content h1 {
+                font-size: 30px; /* Smaller font size for mobile */
+                margin-bottom: 30px;
+            }
+
+            .social-links {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Smaller cards for mobile */
+                gap: 15px;
+            }
+
+            .social-links i {
+                font-size: 30px; /* Smaller icons for mobile */
+            }
+
+            .social-links span {
+                font-size: 16px; /* Smaller text for mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .social-content h1 {
+                font-size: 24px; /* Even smaller font size for very small screens */
+            }
+
+            .social-links {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Very small cards */
+                gap: 10px;
+            }
+
+            .social-links i {
+                font-size: 24px; /* Very small icons */
+            }
+
+            .social-links span {
+                font-size: 14px; /* Very small text */
+            }
+        }
+    </style>
+</head>
+<body onload="document.body.classList.add('fade-in')">
+    <div class="banner">
+        <div class="navbar">
+            <img src="zara logo.png" class="logo">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="cart.html">CART</a></li>
+                <li><a href="about.html">about us</a></li>
+            </ul>
+        </div>
+        <div class="social-content">
+            <h1>Follow Us</h1>
+            <div class="social-links">
+                <a href="https://www.facebook.com/people/%D8%B4%D8%B1%D9%83%D8%A9-%D8%B2%D8%A7%D8%B1%D8%A7-%D9%83%D8%A7%D8%B1%D8%AC%D9%88-%D9%84%D9%84%D8%B4%D8%AD%D9%86-%D8%A7%D9%84%D8%A8%D8%AD%D8%B1%D9%8A-%D9%88%D8%A7%D9%84%D8%AC%D9%88%D9%8A-%D9%88%D8%A7%D9%84%D8%A8%D8%B1%D9%8A-zara-cargo/61559588832561/?mibextid=wwXIfr" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+                
+                <a href="https://wa.me/00218926525252" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
